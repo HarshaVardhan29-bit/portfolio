@@ -1,0 +1,8 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}

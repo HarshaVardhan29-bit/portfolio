@@ -1,0 +1,233 @@
+/* Orbit Container */
+.orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Inner Orbit - Smaller circle */
+.orbit-1 {
+  width: 400px;
+  height: 400px;
+  animation: rotate 12s linear infinite;
+}
+
+/* Outer Orbit - Larger circle */
+.orbit-2 {
+  width: 520px;
+  height: 520px;
+  animation: rotate 20s linear infinite;
+}
+
+/* Orbit Rings (visual circles) */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-ring-1 {
+  width: 400px;
+  height: 400px;
+}
+
+.orbit-ring-2 {
+  width: 520px;
+  height: 520px;
+}
+
+.orbit-path {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(255, 140, 0, 0.2);
+  border-radius: 50%;
+}
+
+/* Rotation Animation */
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Slow spin for center gradient */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+/* Slide up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-slide-up-delay {
+  animation: slide-up 0.8s ease-out 0.2s both;
+}
+
+/* Pulse delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+/* Orbit Icon Positioning */
+.orbit-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  animation: counterRotate 12s linear infinite;
+  animation-delay: var(--delay);
+}
+
+.orbit-2 .orbit-icon {
+  animation-duration: 20s;
+}
+
+/* Counter Rotation to keep icons upright */
+@keyframes counterRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 30px rgba(255, 140, 0, 0.3);
+  border-color: rgba(255, 140, 0, 0.6);
+}
+
+.skill-icon img {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.skill-icon:hover img {
+  transform: scale(1.05);
+}
+
+/* Invert filter for dark logos on dark background */
+.invert {
+  filter: invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .orbit-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-2 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .orbit-ring-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-ring-2 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .orbit-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orbit-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbit-2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbit-ring-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbit-ring-2 {
+    width: 350px;
+    height: 350px;
+  }
+}
