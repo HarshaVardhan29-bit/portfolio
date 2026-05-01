@@ -26,7 +26,7 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-3 mt-2">
               <a
-                href="https://github.com"
+                href="https://github.com/HarshaVardhan29-bit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-brand-orange/20 hover:border-brand-orange/50 transition-all duration-300 border border-white/10"
@@ -34,7 +34,7 @@ const Footer = () => {
                 <span className="material-symbols-outlined text-white text-lg">code</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/harsha-vardhan-pushadapu-81055435b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-brand-orange/20 hover:border-brand-orange/50 transition-all duration-300 border border-white/10"
@@ -42,12 +42,10 @@ const Footer = () => {
                 <span className="material-symbols-outlined text-white text-lg">work</span>
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:harshanaidupushadapu@gmail.com"
                 className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-brand-orange/20 hover:border-brand-orange/50 transition-all duration-300 border border-white/10"
               >
-                <span className="material-symbols-outlined text-white text-lg">chat</span>
+                <span className="material-symbols-outlined text-white text-lg">mail</span>
               </a>
             </div>
           </div>
