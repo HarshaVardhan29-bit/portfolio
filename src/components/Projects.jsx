@@ -18,7 +18,12 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Project Card 1 - SkillSwap */}
-          <div className="group cursor-pointer">
+          <a
+            href="https://skillswap-a3re.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cursor-pointer block"
+          >
             <div className="relative aspect-video rounded-3xl overflow-hidden mb-8 glass-card border-white/5">
               <img
                 alt="SkillSwap Platform"
@@ -35,7 +40,7 @@ const Projects = () => {
                 </span>
               </div>
             </div>
-            <h4 className="text-headline-md font-space-grotesk text-white mb-2">SkillSwap</h4>
+            <h4 className="text-headline-md font-space-grotesk text-white mb-2 group-hover:text-brand-orange transition-colors">SkillSwap</h4>
             <p className="text-brand-orange text-sm font-semibold mb-2">Peer Mentorship & Micro-Learning Platform</p>
             <p className="text-outline mb-4 text-sm">
               Full-stack MERN application connecting learners with mentors for micro-learning sessions with secure JWT authentication and skill-based discovery.
@@ -46,13 +51,16 @@ const Projects = () => {
               <li>MongoDB Atlas data management</li>
               <li>Responsive UI with React & Tailwind</li>
             </ul>
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex gap-3 flex-wrap items-center">
               <span className="text-xs font-bold uppercase text-white/50">React</span>
               <span className="text-xs font-bold uppercase text-white/50">Node.js</span>
               <span className="text-xs font-bold uppercase text-white/50">MongoDB</span>
               <span className="text-xs font-bold uppercase text-white/50">Express</span>
+              <span className="ml-auto text-xs text-brand-orange font-semibold flex items-center gap-1">
+                Live Demo <span className="material-symbols-outlined text-sm">open_in_new</span>
+              </span>
             </div>
-          </div>
+          </a>
 
           {/* Project Card 2 - MRU MentorConnect AI */}
           <div className="group cursor-pointer">
